@@ -1,0 +1,46 @@
+au10 Package
+============
+
+:mod:`Controller` Module
+------------------------
+
+.. automodule:: au10.Controller
+    :members:
+    :undoc-members:
+    :special-members: __init__
+    :show-inheritance:
+
+:mod:`main` Module
+------------------
+
+.. automodule:: au10.main
+    :members:
+    :undoc-members:
+    :special-members: __init__
+    :show-inheritance:
+
+:mod:`networker` Module
+-----------------------
+
+.. automodule:: au10.networker
+    :members:
+    :undoc-members:
+    :special-members: __init__
+    :show-inheritance:
+
+:mod:`window` Module
+--------------------
+
+.. automodule:: au10.window
+    :members:
+    :undoc-members:
+    :special-members: __init__
+    :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+
+    au10.server
+

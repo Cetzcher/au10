@@ -1,0 +1,198 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>au10 Package &#8212; AU10 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="au10-package">
+<h1>au10 Package<a class="headerlink" href="#au10-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-au10.Controller">
+<span id="controller-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">Controller</span></code> Module<a class="headerlink" href="#module-au10.Controller" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="au10.Controller.Controller">
+<em class="property">class </em><code class="descclassname">au10.Controller.</code><code class="descname">Controller</code><a class="headerlink" href="#au10.Controller.Controller" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMainWindow</span></code></p>
+<p>Controlles the GUI</p>
+<dl class="method">
+<dt id="au10.Controller.Controller.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#au10.Controller.Controller.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="au10.Controller.Controller.bind_buttons">
+<code class="descname">bind_buttons</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#au10.Controller.Controller.bind_buttons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binds the buttons to functions.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="au10.Controller.Controller.handle_check">
+<code class="descname">handle_check</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#au10.Controller.Controller.handle_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the check: that is sending a blocking request and resolving possible errors.
+When the request is successful the output textBox will show the formatted info.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="au10.Controller.Controller.handle_close">
+<code class="descname">handle_close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#au10.Controller.Controller.handle_close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the user presses the close button
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="au10.Controller.Controller.handle_reset">
+<code class="descname">handle_reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#au10.Controller.Controller.handle_reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>called when the user presses the reset button.
+Clears all Inputs
+:return: None</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-au10.main">
+<span id="main-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">main</span></code> Module<a class="headerlink" href="#module-au10.main" title="Permalink to this headline">¶</a></h2>
+<p>Entrypoint for the program
+creates a QApplication and hosts the GUI.</p>
+</div>
+<div class="section" id="module-au10.networker">
+<span id="networker-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">networker</span></code> Module<a class="headerlink" href="#module-au10.networker" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="au10.networker.Networker">
+<em class="property">class </em><code class="descclassname">au10.networker.</code><code class="descname">Networker</code><a class="headerlink" href="#au10.networker.Networker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="au10.networker.Networker.make_request">
+<em class="property">static </em><code class="descname">make_request</code><span class="sig-paren">(</span><em>host</em>, <em>port</em>, <em>sstr</em><span class="sig-paren">)</span><a class="headerlink" href="#au10.networker.Networker.make_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes  a REST request to a server at host:port
+:param host: host as str
+:param port: port as str
+:param sstr: the searchtex
+:return: a tuple of lang, prob, relieable, iso.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-au10.window">
+<span id="window-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">window</span></code> Module<a class="headerlink" href="#module-au10.window" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="au10.window.Ui_MainWindow">
+<em class="property">class </em><code class="descclassname">au10.window.</code><code class="descname">Ui_MainWindow</code><a class="headerlink" href="#au10.window.Ui_MainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="au10.window.Ui_MainWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>MainWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#au10.window.Ui_MainWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="au10.window.Ui_MainWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>MainWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#au10.window.Ui_MainWindow.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="au10.server.html">server Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="au10.server.html#module-au10.server.server"><code class="docutils literal"><span class="pre">server</span></code> Module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">AU10</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Pierre Rieger.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/au10.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
